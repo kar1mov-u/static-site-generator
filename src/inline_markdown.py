@@ -65,7 +65,7 @@ def split_nodes_link(old_nodes):
             res.append(node)
             continue
         #splitting into parts using pattern
-        parts = re.split(f'({pattern})',node.text)
+        parts = re.split(f'({pattern})',node.text)  
         #Itterating through every part
         for part in parts:
             if  part =='':
@@ -80,7 +80,7 @@ def split_nodes_link(old_nodes):
                 res.append(n)
             else:
                 n = TextNode(part,text_type_text)
-                res.append(n)
+                res.append(n)   
 
 
     return res
